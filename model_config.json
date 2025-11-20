@@ -1,0 +1,37 @@
+{
+  "model_name": "AuraGen",
+  "version": "1.0.0",
+  "description": "Advanced long-form video generation model",
+  "architecture": {
+    "type": "neural_chain_transformer",
+    "dim": 2048,
+    "num_chains": 12,
+    "max_frames": 432000,
+    "video_resolution": [1920, 1080]
+  },
+  "capabilities": [
+    "long_form_video_generation",
+    "dialogue_generation",
+    "background_music_generation",
+    "scene_planning",
+    "multi_hour_videos"
+  ],
+  "supported_formats": {
+    "video": ["mp4", "avi"],
+    "audio": ["wav", "mp3"],
+    "weights": ["safetensors", "pt"]
+  },
+  "access_control": {
+    "type": "local_token",
+    "tokens": [
+      "rudra_qazwsxedcrfvtgbyhnujmikolp",
+      "rudra_plokmijnuhbygvtfcrdxeszwaq"
+    ],
+    "note": "Tokens are for local integration only. Model is never deployed publicly."
+  },
+  "hardware_requirements": {
+    "minimum_vram": "16GB",
+    "recommended_vram": "40GB",
+    "storage": "45GB for weights and cache"
+  }
+}

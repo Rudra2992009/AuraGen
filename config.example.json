@@ -1,0 +1,33 @@
+# AuraGen Configuration
+# Copy this file to config.json and customize
+
+{
+  "model": {
+    "dim": 2048,
+    "num_chains": 12,
+    "max_frames": 432000,
+    "video_resolution": [1920, 1080]
+  },
+  "training": {
+    "learning_rate": 0.0001,
+    "batch_size": 1,
+    "num_epochs": 10,
+    "save_interval": 1000,
+    "mixed_precision": true,
+    "gradient_clip": 1.0
+  },
+  "generation": {
+    "default_fps": 24,
+    "default_duration": 30,
+    "apply_color_grading": true,
+    "color_grading_style": "cinematic",
+    "generate_music": true,
+    "generate_dialogue": true
+  },
+  "paths": {
+    "weights_dir": "weights",
+    "data_dir": "data",
+    "output_dir": "output",
+    "checkpoint_dir": "checkpoints"
+  }
+}
